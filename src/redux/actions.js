@@ -78,10 +78,10 @@ const userProfileError = (error) => ({
   error
 });
 
-export const getAllProfile = (address) => async (dispatch) => {
+export const getAllProfile = () => async (dispatch) => {
   try {
     dispatch(loadingProfile());
-    const users = await getAllProfiles(address);
+    const users = await getAllProfiles();
     dispatch(getAllProfileSuccessfully(users));
     dispatch(loadingProfileEnds());
     return true;

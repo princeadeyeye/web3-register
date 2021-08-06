@@ -26,7 +26,7 @@ function usePrevious(value) {
   useEffect(() => {
     //eslint-disable-next-line
       if(prevUsers !== users) {
-        dispatch(getAllProfile(account));
+        dispatch(getAllProfile());
       }
       //eslint-disable-next-line
   }, [users])

@@ -22,8 +22,8 @@ export async function requestAccount() {
     else alert("instal metamask") 
   }
 
-  export async function getAllProfiles(address) {
-    console.log(`fetching contract for address ${address}`);
+  export async function getAllProfiles() {
+    console.log(`fetching contract for address ${SMART_CONTRACT_ADDRESS}`);
   if (typeof window.ethereum !== 'undefined') {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const contract = new ethers.Contract(SMART_CONTRACT_ADDRESS, SMART_CONTRACT_ABI, provider)
